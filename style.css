@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: #dadadae0;
+}
+
+.container {
+  justify-content: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  width: 420px;
+  height: 520px;
+  border-radius: 0 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f4529;
+  color: #f1f0e8;
+  box-shadow: 10px 5px 0 0.2em #ecedcd;
+  /* transform-style: preserve-3d;
+  animation: animate 20s linear infinite; */
+  
+}
+
+.card h1 {
+  font-size: 2rem;
+  color: #ecedcd;
+}
+
+.card:hover{
+    transition: all 1s;
+    background-color: #334d3a;
+}
+
+.fields {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+.fields select {
+  height: 40px;
+  padding: 10px;
+  border-radius: 2px 5px;
+  outline: none;
+  border: none;
+}
+
+.fields label {
+  margin-top: 10px;
+  color: #ecedcd;
+}
+
+.fields input {
+  height: 40px;
+  padding: 10px;
+  border-radius: 2px 5px;
+  outline: none;
+  border: none;
+}
+
+.fields button {
+  margin-top: 20px;
+  height: 40px;
+  border-radius: 2px 5px;
+  outline: none;
+  border: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #1f4529;
+}
+
+.fields button:hover {
+  cursor: pointer;
+  background-color: #ecedcd;
+}
+
+#result {
+  background-color: #eeebeb;
+  height: 60px;
+  margin-top: 15px;
+  border-radius: 2px 5px;
+  outline: none;
+  border: none;
+  display: none;
+}
+
+/* @keyframes animate {
+    0%{
+        transform: perspective(1000px) rotateY('0deg');
+    }
+    100%{
+        transform: perspective(1000px) rotateY('360deg');
+    }
+} */

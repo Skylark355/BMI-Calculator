@@ -7,7 +7,7 @@ function calculate() {
   const weight = parseFloat(document.getElementById("weight").value);
   const result = document.getElementById("result");
 
-  console.log({ gender, age, height, weight });
+  // console.log({ gender, age, height, weight });
 
   // Clear previous result
   result.innerText = "";
@@ -15,6 +15,7 @@ function calculate() {
   // Input validation
   if (!gender) {
     result.innerText = `Please select a gender.`;
+    // result.style.color = "white";
     return;
   }
 
@@ -24,12 +25,12 @@ function calculate() {
   }
 
   if (isNaN(height) || height <= 0 || height > 2.5) {
-    result.innerText = `Please enter a valid height in meters.`;
+    result.innerText = `Please enter a valid height in meters which should not exceed 2.5m.`;
     return;
   }
 
   if (isNaN(weight) || weight <= 0 || weight > 300) {
-    result.innerText = `Please enter a valid weight in kilograms (e.g., 70).`;
+    result.innerText = `Please enter a valid weight in kilograms which should not exceed 300kg (e.g., 70).`;
     return;
   }
 
@@ -38,13 +39,16 @@ function calculate() {
 
   // Determine BMI category
   let category = "";
-  switch (category) {
+  switch (true) {
     case bmi < 18.5:
       category = "Underweight";
+      break;
     case bmi >= 18.5 && bmi < 24.9:
       category = "Normal weight";
+      break;
     case bmi >= 25 && bmi < 29.9:
       category = "Overweight";
+      break;
     default:
       category = "Obesity";
   }
@@ -61,13 +65,19 @@ function calculate() {
   // }
 
   // Display result
+
   result.innerText = `Gender: ${gender}\nAge: ${age} years\nYour BMI is ${bmi.toFixed(
     2
   )} (${category}).`;
 
-  // reset();
+  resetFields();
+  result.style.display = "block";
+  result.style.backgroundColor = "#f1f0e8";
 }
 
-// function reset() {
-//   fields.value = "";
-// }
+function resetFields() {
+  document.getElementById("gender").value = "";
+  document.getElementById("age").value = "";
+  document.getElementById("height").value = "";
+  document.getElementById("weight").value = "";
+}

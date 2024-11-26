@@ -5,8 +5,8 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body{
-    background-color: #dadadae0;
+body {
+  background-color: #dadadae0;
 }
 
 .container {
@@ -18,8 +18,8 @@ body{
 }
 
 .card {
-  width: 420px;
-  height: 520px;
+  width: 440px;
+  height: 550px;
   border-radius: 0 30px;
   padding: 20px;
   display: flex;
@@ -31,7 +31,6 @@ body{
   box-shadow: 10px 5px 0 0.2em #ecedcd;
   /* transform-style: preserve-3d;
   animation: animate 20s linear infinite; */
-  
 }
 
 .card h1 {
@@ -39,9 +38,9 @@ body{
   color: #ecedcd;
 }
 
-.card:hover{
-    transition: all 1s;
-    background-color: #334d3a;
+.card:hover {
+  transition: all 1s;
+  background-color: #334d3a;
 }
 
 .fields {
@@ -90,13 +89,16 @@ body{
 }
 
 #result {
-  background-color: #eeebeb;
-  height: 60px;
+  /* background-color: #eeebeb; */
+  height: 90px;
   margin-top: 15px;
   border-radius: 2px 5px;
   outline: none;
   border: none;
-  display: none;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  /* display: none; */
 }
 
 /* @keyframes animate {
